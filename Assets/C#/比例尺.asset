@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4062e9143252b4644bf4767c0f67ba9c, type: 3}
+  m_Name: "\u6BD4\u4F8B\u5C3A"
+  m_EditorClassIdentifier: 
+  nameNPC: "\u6BD4\u4F8B\u5C3A"
+  dataDialogue:
+  - content: "shit !! \u6211\u4E00\u7121\u6240\u6709.\u5C31\u662F\u500B\u7403QAQ"
+    sound: {fileID: 8300000, guid: 5dea04fea48a9405a866bf18fc7534c8, type: 3}
