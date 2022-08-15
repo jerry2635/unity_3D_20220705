@@ -7,7 +7,7 @@ namespace jerry
     ///scriptableobject 腳本化物件
     ///將程式內容存為物件放在project內
     ///
-    [CreateAssetMenu(menuName = "jerry/Data NPC", fileName = "Data NPC")]
+    [CreateAssetMenu(menuName = "jerry/Data NPC", fileName = "Data NPC",order =2)]
     public class NPCdata : ScriptableObject
     {
         [Header("NPC名稱")]
