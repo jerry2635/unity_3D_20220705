@@ -101,6 +101,5 @@ namespace jerry
         }
         #endregion
     }
-
 }
 

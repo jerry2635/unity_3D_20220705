@@ -1,5 +1,7 @@
 using UnityEngine;
 using UnityEngine.AI;
+
+
 namespace jerry
 {
     /// <summary>
@@ -24,6 +26,7 @@ namespace jerry
         private void Awake()
         {
             ani = GetComponent<Animator>();
+            enemyAttack = GetComponent<EnemyAttack>();
             nma = GetComponent<NavMeshAgent>();
             nma.speed = dataEnemy.speedWalk;
         }
@@ -100,24 +103,35 @@ namespace jerry
         /// </summary>
         private void Track()
         {
+            if (ani.GetCurrentAnimatorStateInfo(0).IsName("攻擊"))//抓取控制器圖層名稱
+            {
+                nma.velocity = Vector3.zero;
+            }
+
             nma.SetDestination(v3TargetPosition);
             ani.SetBool(parWalk,true);
+            ani.ResetTrigger(parAttack);
 
             if (Vector3.Distance(transform.position,v3TargetPosition) <= dataEnemy.rangeAttack)
             {
                 stateEnemy = StateEnemy.Attack;
             }
+            else
+            {
+                timerAttack = dataEnemy.intervalAttack;
+            }
         }
 
         private float timerAttack; // 浮點數 攻擊時間
-        private string parAttack = "觸發攻擊"; 
+        private string parAttack = "觸發攻擊";
+        private EnemyAttack enemyAttack;
         /// <summary>
         /// 攻擊
         /// </summary>
         private void Attack()
         {
             ani.SetBool(parWalk, false);
-            //nma.velocity = Vector3.zero; //移動慣性為零
+            nma.velocity = Vector3.zero; //移動慣性為零
             if (timerAttack < dataEnemy.intervalAttack)
             {
                 timerAttack += Time.deltaTime; //延遲時間
@@ -126,18 +140,27 @@ namespace jerry
             {
                 ani.SetTrigger(parAttack);
                 timerAttack = 0;
+                enemyAttack.StartAttack();
+                stateEnemy = StateEnemy.Track;
             }
         }
 
         private void CheckTargetInTrackRange()
         {
-            if (stateEnemy == StateEnemy.Attack) return; //如果敵人 處於 類別 攻擊 )返回上段程式
+           
 
             Collider[] hits = Physics.OverlapSphere(transform.position, dataEnemy.rangeTrack, dataEnemy.layerTarget);
             if (hits.Length > 0)
             {
                 v3TargetPosition = hits[0].transform.position;
+
+                if (stateEnemy == StateEnemy.Attack) return; //如果敵人 處於 類別 攻擊 )返回上段程式
+
                 stateEnemy = StateEnemy.Track;
+            }
+            else
+            {
+                stateEnemy = StateEnemy.Wander;
             }
         }
         #endregion
