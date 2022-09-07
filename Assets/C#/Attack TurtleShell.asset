@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attack: 100
   attackAreaColor: {r: 1, g: 0, b: 0, a: 0.5}
-  attackAreaSize: {x: 1, y: 1.09, z: 1}
-  attackAreaOffset: {x: 0, y: 0.5, z: 0.7}
+  attackAreaSize: {x: 2, y: 1, z: 2}
+  attackAreaOffset: {x: 0, y: 0.57, z: 1.5}
   layerTarget:
     serializedVersion: 2
     m_Bits: 8

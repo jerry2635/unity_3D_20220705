@@ -7,8 +7,16 @@ namespace jerry
     {
         [SerializeField, Header("攻擊資料")]
         private DataAttack dataAttack;
+        [SerializeField, Header("攻擊動畫名稱")]
+        private string nameAnimation;
 
         protected bool canAttack = true;
+        protected Animator ani;
+
+        protected virtual void Awake()
+        {
+            ani = GetComponent<Animator>();
+        }
 
         private void OnDrawGizmosSelected()
         {
@@ -47,6 +55,8 @@ namespace jerry
 
         public void CheckAttackArea()
         {
+            if (!ani.GetCurrentAnimatorStateInfo(0).IsName(nameAnimation)) return;
+
             Collider[] hits = Physics.OverlapBox(
               transform.position +
               transform.TransformDirection(dataAttack.attackAreaOffset),
@@ -55,7 +65,7 @@ namespace jerry
 
             if (hits.Length > 0)
             {
-
+                hits[0].GetComponent<HealthSystem>().Hurt(dataAttack.attack);//呼叫血量系統.受傷(接收攻擊資料)
             }
         }
     }

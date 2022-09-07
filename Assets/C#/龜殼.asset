@@ -15,7 +15,7 @@ MonoBehaviour:
   hp: 2000
   attack: 100
   rangeTrack: 7.5
-  rangeAttack: 1.5
+  rangeAttack: 2.6
   speedWalk: 1
   propbilityProp: 1
   goProp: {fileID: 0}
@@ -23,4 +23,4 @@ MonoBehaviour:
   layerTarget:
     serializedVersion: 2
     m_Bits: 8
-  intervalAttack: 0
+  intervalAttack: 3

@@ -9,7 +9,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: "\u6B7B\u4EA1"
+    m_ConditionEvent: "\u89F8\u767C\u6B7B\u4EA1"
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -3303625994960501174}
@@ -34,10 +34,10 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: "\u53D7\u50B7"
+    m_ConditionEvent: "\u89F8\u767C\u53D7\u50B7"
     m_EventTreshold: 0
   - m_ConditionMode: 2
-    m_ConditionEvent: "\u6B7B\u4EA1"
+    m_ConditionEvent: "\u89F8\u767C\u6B7B\u4EA1"
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -1566237333140759306}
@@ -237,7 +237,7 @@ AnimatorStateTransition:
     m_ConditionEvent: "\u8E22"
     m_EventTreshold: 0
   - m_ConditionMode: 2
-    m_ConditionEvent: "\u6B7B\u4EA1"
+    m_ConditionEvent: "\u89F8\u767C\u6B7B\u4EA1"
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 9240511675690523}
@@ -340,10 +340,10 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: "\u653B\u64CA"
+    m_ConditionEvent: "\u89F8\u767C\u653B\u64CA"
     m_EventTreshold: 0
   - m_ConditionMode: 2
-    m_ConditionEvent: "\u6B7B\u4EA1"
+    m_ConditionEvent: "\u89F8\u767C\u6B7B\u4EA1"
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 6936430757549126966}
@@ -351,7 +351,7 @@ AnimatorStateTransition:
   m_Mute: 0
   m_IsExit: 0
   serializedVersion: 3
-  m_TransitionDuration: 0.25
+  m_TransitionDuration: 0
   m_TransitionOffset: 0
   m_ExitTime: 0.75
   m_HasExitTime: 0
@@ -395,19 +395,19 @@ AnimatorController:
   m_Name: "\u8C93\u738B\u63A7\u5236\u5668"
   serializedVersion: 5
   m_AnimatorParameters:
-  - m_Name: "\u653B\u64CA"
+  - m_Name: "\u89F8\u767C\u653B\u64CA"
     m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
     m_Controller: {fileID: 0}
-  - m_Name: "\u53D7\u50B7"
+  - m_Name: "\u89F8\u767C\u53D7\u50B7"
     m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
     m_Controller: {fileID: 0}
-  - m_Name: "\u6B7B\u4EA1"
+  - m_Name: "\u89F8\u767C\u6B7B\u4EA1"
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0

@@ -19,7 +19,11 @@ namespace jerry
         private NavMeshAgent nma;
         private Vector3 v3TargetPosition;
         private string parWalk = "走路開關";
-        private float timeIdle;
+        private string parAttack = "觸發攻擊";
+        private float timerAttack;
+        private float timerIdle;
+        private EnemyAttack enemyAttack;
+
         #endregion
 
         #region 事件
@@ -48,6 +52,14 @@ namespace jerry
             CheckTargetInTrackRange();
         }
         #endregion
+        /// <summary>
+        /// 關閉事件:此類別被關閉時執行一次
+        /// </summary>
+        private void OnDisable()
+        {
+            //綠色波浪符:即將過時/被刪除  建議使用新的API替代方案
+            nma.isStopped = true;
+        }
 
         #region 方法
         private void StateSwitcher()
@@ -89,12 +101,12 @@ namespace jerry
         {
             //nma.velocity=Vector3.zero; //物理滑行歸零
             ani.SetBool(parWalk, false);
-            timeIdle += Time.deltaTime;
+            timerIdle += Time.deltaTime;
             //print("等待時間:" + timeIdle);
             float r = Random.Range(dataEnemy.timeIdleRange.x, dataEnemy.timeIdleRange.y);
-            if (timeIdle >= r)
+            if (timerIdle >= r)
             {
-                timeIdle = 0;
+                timerIdle = 0;
                 stateEnemy = StateEnemy.Wander;
             }
         }
@@ -103,7 +115,7 @@ namespace jerry
         /// </summary>
         private void Track()
         {
-            if (ani.GetCurrentAnimatorStateInfo(0).IsName("攻擊"))//抓取控制器圖層名稱
+            if (ani.GetCurrentAnimatorStateInfo(0).IsName("觸發攻擊"))//抓取控制器圖層名稱
             {
                 nma.velocity = Vector3.zero;
             }
@@ -122,9 +134,6 @@ namespace jerry
             }
         }
 
-        private float timerAttack; // 浮點數 攻擊時間
-        private string parAttack = "觸發攻擊";
-        private EnemyAttack enemyAttack;
         /// <summary>
         /// 攻擊
         /// </summary>

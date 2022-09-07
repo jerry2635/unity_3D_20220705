@@ -12,12 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e893301fe6cd8b64683299c2d4db0b2c, type: 3}
   m_Name: AttackPlayer
   m_EditorClassIdentifier: 
-  attack: 0
+  attack: 300
   attackAreaColor: {r: 1, g: 0, b: 0, a: 0.5}
-  attackAreaSize: {x: -2.35, y: 1.53, z: 1.45}
+  attackAreaSize: {x: -1.97, y: 2.52, z: 1.82}
   attackAreaOffset: {x: 0, y: 1.29, z: 1.54}
   layerTarget:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 64
   delayAttack: 1.5
-  animationAttack: {fileID: -203655887218126122, guid: b85baf08707079e458f2815ef6fb3037, type: 3}
+  animationAttack: {fileID: -203655887218126122, guid: 534dcc5ae2e1dd44a865c712b51b50f9, type: 3}
