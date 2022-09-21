@@ -423,7 +423,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.0950276, y: 1}
+    m_SensorSize: {x: 1.0257732, y: 1}
     Iso: 200
     ShutterSpeed: 0.005
     Aperture: 16
@@ -851,6 +851,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dataHealth: {fileID: 11400000, guid: 5cd1b1fec06ed7541ab70433eac1249a, type: 2}
   imgHealth: {fileID: 592646481}
+--- !u!114 &402974384
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 402974375}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e94a4c945ad215e48a2af3b4c03f4573, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &444139088
 GameObject:
   m_ObjectHideFlags: 3
@@ -1336,7 +1348,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.0950276, y: 1}
+    m_SensorSize: {x: 1.0257732, y: 1}
     Iso: 200
     ShutterSpeed: 0.005
     Aperture: 16
@@ -2752,6 +2764,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dataHealth: {fileID: 11400000, guid: 68ac3ecc80d45d64ea5b60a7db9324ce, type: 2}
   imgHealth: {fileID: 708379711}
+--- !u!114 &1460649928
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1460649914}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e7e5546bdcba4d489dd68c842f06467, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefaChips: {fileID: 4546329989780683814}
+  countMaxChips: 30
 --- !u!1 &1462809153
 GameObject:
   m_ObjectHideFlags: 0
@@ -3375,7 +3401,7 @@ Terrain:
   m_DrawTreesAndFoliage: 1
   m_StaticShadowCaster: 0
   m_ReflectionProbeUsage: 1
-  m_MaterialTemplate: {fileID: 10652, guid: 0000000000000000f000000000000000, type: 0}
+  m_MaterialTemplate: {fileID: 2100000, guid: 22ff8771d87ef27429e670136399094b, type: 2}
   m_BakeLightProbesForTrees: 1
   m_PreserveTreePrototypeLayers: 0
   m_DeringLightProbesForTrees: 1
@@ -3827,7 +3853,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.0950276, y: 1}
+    m_SensorSize: {x: 1.0257732, y: 1}
     Iso: 200
     ShutterSpeed: 0.005
     Aperture: 16
@@ -4140,7 +4166,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.0950276, y: 1}
+    m_SensorSize: {x: 1.0257732, y: 1}
     Iso: 200
     ShutterSpeed: 0.005
     Aperture: 16
@@ -4647,3 +4673,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c03fe0f93b5f3d3438f22e8a7f52b695, type: 3}
+--- !u!1 &4546329989780683814 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5438864753481809410, guid: c03fe0f93b5f3d3438f22e8a7f52b695, type: 3}
+  m_PrefabInstance: {fileID: 4546329989780683813}
+  m_PrefabAsset: {fileID: 0}
